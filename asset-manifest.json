@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/RedFrame/static/css/main.a5ab59a2.chunk.css",
+    "main.js": "/RedFrame/static/js/main.7d225976.chunk.js",
+    "main.js.map": "/RedFrame/static/js/main.7d225976.chunk.js.map",
+    "runtime-main.js": "/RedFrame/static/js/runtime-main.84734f18.js",
+    "runtime-main.js.map": "/RedFrame/static/js/runtime-main.84734f18.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/RedFrame/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.f032670c.chunk.js": "/RedFrame/static/js/2.f032670c.chunk.js",
+    "static/js/2.f032670c.chunk.js.map": "/RedFrame/static/js/2.f032670c.chunk.js.map",
+    "static/js/3.c32c6e6b.chunk.js": "/RedFrame/static/js/3.c32c6e6b.chunk.js",
+    "static/js/3.c32c6e6b.chunk.js.map": "/RedFrame/static/js/3.c32c6e6b.chunk.js.map",
+    "index.html": "/RedFrame/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/RedFrame/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.a5ab59a2.chunk.css.map": "/RedFrame/static/css/main.a5ab59a2.chunk.css.map",
+    "static/js/2.f032670c.chunk.js.LICENSE.txt": "/RedFrame/static/js/2.f032670c.chunk.js.LICENSE.txt",
+    "static/media/Path.png": "/RedFrame/static/media/Path.6ae88a08.png",
+    "static/media/Qmark.png": "/RedFrame/static/media/Qmark.0e17530b.png",
+    "static/media/index.css": "/RedFrame/static/media/RB_Regular.a3d325e7.ttf",
+    "static/media/brandingBG.png": "/RedFrame/static/media/brandingBG.52bc60b3.png",
+    "static/media/deco-red.png": "/RedFrame/static/media/deco-red.b0e3d591.png",
+    "static/media/deco-white.png": "/RedFrame/static/media/deco-white.6295becb.png",
+    "static/media/designBG.png": "/RedFrame/static/media/designBG.2b4e9013.png",
+    "static/media/eventsBG.png": "/RedFrame/static/media/eventsBG.bee3f857.png",
+    "static/media/logo.png": "/RedFrame/static/media/logo.76b6f5f3.png",
+    "static/media/mainBG.png": "/RedFrame/static/media/mainBG.657b578a.png",
+    "static/media/marktingBG.png": "/RedFrame/static/media/marktingBG.86788387.png",
+    "static/media/productionBG.png": "/RedFrame/static/media/productionBG.d17f543e.png",
+    "static/media/webBG.png": "/RedFrame/static/media/webBG.111575c9.png",
+    "static/media/welcome.png": "/RedFrame/static/media/welcome.6343bdb6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.84734f18.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.f032670c.chunk.js",
+    "static/css/main.a5ab59a2.chunk.css",
+    "static/js/main.7d225976.chunk.js"
+  ]
+}
