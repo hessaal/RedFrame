@@ -25,7 +25,7 @@ class App extends Component {
         <main>
           <TransitionGroup>
             <CSSTransition
-              timeout={300}
+              timeout={1000}
               classNames='pageSliderUp'
               key={this.props.location.key}
             >

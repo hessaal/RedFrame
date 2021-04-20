@@ -20,20 +20,18 @@ overflow-x: hidden;
 }
 
 .pageSliderUp-enter {
-  opacity: 0;
   transform: translate3d(0, 100%, 0);
 }
 
-.pageSliderUp-enter.pageSliderUp-enter-active {
-  opacity: 1;
+.pageSliderUp-enter-active {
   transform: translate3d(0, 0, 0);
-  transition: opacity 1000ms ease-in,transform 1000ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 
 .pageSliderUp-exit {
   opacity: 1;
 }
-.pageSliderUp-exit.pageSliderUp-exit-active {
+.pageSliderUp-exit-active {
   opacity: 0;
-  transition: opacity 300ms ease-in ;
+  transition: opacity 300ms ease-out;
 }
