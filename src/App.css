@@ -27,7 +27,7 @@ overflow-x: hidden;
 .pageSliderUp-enter.pageSliderUp-enter-active {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition: opacity 1000ms ease-in 1000ms,transform 1000ms ease-in-out 1000ms;
+  transition: opacity 1000ms ease-in,transform 1000ms ease-in-out;
 }
 
 .pageSliderUp-exit {
