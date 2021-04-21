@@ -9,10 +9,6 @@ import {
 }
     from '@fortawesome/free-brands-svg-icons'
 
-
-
-
-
 // footer container 
 export function Footer() {
 
@@ -35,7 +31,6 @@ export function Footer() {
             </div></div >
 
     );
-
 
 }
 

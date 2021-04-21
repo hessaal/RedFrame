@@ -10,6 +10,7 @@ import redDeco from './../Assets/deco-red.png'
 import whiteDeco from './../Assets/deco-white.png'
 import { withRouter } from 'react-router-dom';
 import Assos from "./common/Assos";
+import { CSSTransition } from 'react-transition-group';
 
 // this will show the first page 
 export class Home extends Component {
@@ -21,12 +22,13 @@ export class Home extends Component {
             id: 1,
             serviceCount: getServicesCount(),
             assos_num: 10,
-            assos_start: 0
+            assos_start: 0,
+            show: false
         }
     }
 
     // these 4 function redirect the browser to spicific path
-    gotoProject = () => { this.props.history.push('/projects') }
+    gotoProject = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/projects'), 1000); }
     gotoOrder = () => { this.props.history.push('/order') }
     gotoAbout = () => { this.props.history.push('/about-us') }
     gotoServies = () => { this.props.history.push('/services') }
@@ -45,15 +47,13 @@ export class Home extends Component {
     }
     componentDidMount() {
         this.intervalId_next = setInterval(() => this.goToNext(), 10000);
+        setTimeout(() => this.setState({ show: true }), 100);
     }
-
 
     componentWillUnmount() {
         clearInterval(this.intervalId_next);
-
+        // this.setState({ show: false });
     }
-
-
     // goToback function show the previous service on the div represent services
     goToBack = () => {
         let id = this.state.id
@@ -83,51 +83,69 @@ export class Home extends Component {
         return (
             <div >
                 <div className='row my-5 ml-5'>
-                    <div className='col-md-6 col-xs-12 mb_col'>
-                        <div className='container ml-3'>
-                            <div className='row align-items-center'>
-                                <img className='arrow' src={arrow_right} alt="arrow " onClick={this.goToNext} />
+                    <CSSTransition
+                        timeout={1000}
+                        classNames='leftElement'
+                        in={this.state.show}
+                    >
+                        <div className='col-md-6 col-xs-12 mb_col'>
+                            <div className='container ml-3'>
+                                <div className='row align-items-center'>
+                                    <img className='arrow' src={arrow_right} alt="arrow " onClick={this.goToNext} />
 
-                                <div className=" img_warp" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-                                    <img className="img" src={require('./../Assets/' + service.backgroundImg + '.png').default} alt="this slowpoke moves" />
-                                    <div className={title_hover}>
-                                        <img src={require('./../Assets/' + service.icon + '.png').default} className="FP_icon" alt="service icon" />
-                                        <h6>{service.name_ar}</h6>
-                                        <h6>{service.name_en}</h6>
+                                    <div className=" img_warp" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
+                                        <img className="img" src={require('./../Assets/' + service.backgroundImg + '.png').default} alt="this slowpoke moves" />
+                                        <div className={title_hover}>
+                                            <img src={require('./../Assets/' + service.icon + '.png').default} className="FP_icon" alt="service icon" />
+                                            <h6>{service.name_ar}</h6>
+                                            <h6>{service.name_en}</h6>
+                                        </div>
+                                        <div className={des_hover}>
+                                            <p className="img_des_text">
+                                                {service.brif_info}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className={des_hover}>
-                                        <p className="img_des_text">
-                                            {service.brif_info}
-                                        </p>
-                                    </div>
+
+                                    <img src={redDeco} id='red_deco' alt="" />
+                                    <img className='arrow' src={arrow_left} onClick={this.goToBack} alt="arrow " />
                                 </div>
-
-                                <img src={redDeco} id='red_deco' alt="" />
-                                <img className='arrow' src={arrow_left} onClick={this.goToBack} alt="arrow " />
-                            </div>
-                        </div></div>
-
-                    <div className='col-md-6 col-xs-12 '>
-                        <img src={whiteDeco} id='white_deco' alt="" />
-                        <div className='row right_side'>
-                            <Button classname="col col-md-3 FP_Btns_spacial" label={<div> <div className="icon_box"><FontAwesomeIcon className="icon_first" icon={faCheck} /></div> <p>تواصل معنا <br />وتقـدم بطلبك</p></div>} handleClick={this.gotoOrder} />
-                            <div className="col col-md-5">
-                                <Button classname="row FP_Btns " label="من نحن ؟" handleClick={this.gotoAbout} />
-                                <Button classname="row FP_Btns " label="خدماتنا " handleClick={this.gotoServies} />
-                                <Button classname="row FP_Btns " label="من أعمالنا" handleClick={this.gotoProject} />
                             </div></div>
-                    </div></div>
-                <div className='row bottom_side' >
-                    <div className='col-8 position-relative'>
-                        <div id='assos'></div>
-                        <h5 id='assosicte_title'>شركاء النجاح</h5>
-                        <Assos />
-                    </div>
-                    <div className="col-4 " id="time_container">
-                        <Clock />
-                    </div>
-                </div>
+                    </CSSTransition>
 
+
+                    <CSSTransition
+                        timeout={1000}
+                        classNames='rightElement'
+                        in={this.state.show}
+                    >
+                        <div className='col-md-6 col-xs-12 '>
+                            <img src={whiteDeco} id='white_deco' alt="" />
+                            <div className='row right_side'>
+                                <Button classname="col col-md-3 FP_Btns_spacial" label={<div> <div className="icon_box"><FontAwesomeIcon className="icon_first" icon={faCheck} /></div> <p>تواصل معنا <br />وتقـدم بطلبك</p></div>} handleClick={this.gotoOrder} />
+                                <div className="col col-md-5">
+                                    <Button classname="row FP_Btns " label="من نحن ؟" handleClick={this.gotoAbout} />
+                                    <Button classname="row FP_Btns " label="خدماتنا " handleClick={this.gotoServies} />
+                                    <Button classname="row FP_Btns " label="من أعمالنا" handleClick={this.gotoProject} />
+                                </div></div>
+                        </div></CSSTransition>
+                </div>
+                <CSSTransition
+                    timeout={1000}
+                    classNames='rightElement'
+                    in={this.state.show}
+                >
+                    <div className='row bottom_side' >
+                        <div className='col-8 position-relative'>
+                            <div id='assos'></div>
+                            <h5 id='assosicte_title'>شركاء النجاح</h5>
+                            <Assos />
+                        </div>
+                        <div className="col-4 " id="time_container">
+                            <Clock />
+                        </div>
+                    </div>
+                </CSSTransition>
             </div >
 
 
