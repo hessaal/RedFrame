@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export function Statics() {
+export function Statics(run) {
     // this will set the number of designs, clints, arts, productions red frame represented in page
     const [design, setDesign] = useState(0);
     const [clint, setClint] = useState(0);

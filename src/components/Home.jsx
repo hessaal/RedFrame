@@ -124,9 +124,10 @@ export class Home extends Component {
                             <div className='row right_side'>
                                 <Button classname="col col-md-3 FP_Btns_spacial" label={<div> <div className="icon_box"><FontAwesomeIcon className="icon_first" icon={faCheck} /></div> <p>تواصل معنا <br />وتقـدم بطلبك</p></div>} handleClick={this.gotoOrder} />
                                 <div className="col col-md-5">
-                                    <Button classname="row FP_Btns " label="من نحن ؟" handleClick={this.gotoAbout} />
-                                    <Button classname="row FP_Btns " label="خدماتنا " handleClick={this.gotoServies} />
-                                    <Button classname="row FP_Btns " label="من أعمالنا" handleClick={this.gotoProject} />
+
+                                    <Button id='FB' classname="row FP_Btns " label="من نحن ؟" handleClick={this.gotoAbout} />
+                                    <Button id='SB' classname="row FP_Btns " label="خدماتنا " handleClick={this.gotoServies} />
+                                    <Button id='TB' classname="row FP_Btns " label="من أعمالنا" handleClick={this.gotoProject} />
                                 </div></div>
                         </div></CSSTransition>
                 </div>

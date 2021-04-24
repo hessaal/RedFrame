@@ -20,13 +20,13 @@ classname: is button class name (empty by default)
 */
 
 
-const Service = ({ backgroundImg, icon, name_ar, name_en, lable, handleClick, classname = '' }) => {
+const Service = ({ key, backgroundImg, icon, name_ar, name_en, lable, handleClick, classname = '' }) => {
 
     const background_image = require('./../../Assets/' + backgroundImg + '.png').default;
     const icon_image = require('./../../Assets/' + icon + '.png').default;
 
     return (
-        <div style={{
+        <div key={key} style={{
             backgroundImage: `url(${background_image})`,
             backgroundSize: '100% 100%'
         }}

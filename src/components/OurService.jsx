@@ -6,12 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import ServiceSample from "./common/ServiceSample";
 import PageHeader from "./common/PageHeader";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 export class OurService extends Component {
     state = {
         services: getServices(),
         showInfo: false,
-        service: {}
+        service: {},
+        mounted: false
     }
 
     // showServiceInfo will handle the clicks on "what is this service" button and show the service info
@@ -23,9 +25,12 @@ export class OurService extends Component {
 
     }
 
+    componentDidMount() {
+        this.setState({ mounted: true })
+    }
 
     render() {
-        const { services: allServices, showInfo, service } = this.state;
+        const { services: allServices, showInfo, service, mounted } = this.state;
         const { length: count } = allServices;
 
         return (
@@ -53,24 +58,37 @@ export class OurService extends Component {
                             }
 
                             {/* this shows red frame services */}
-                            <div className="row justify-content-center table-row">
-                                {allServices.map(service => (
-                                    <div className="col-md-6 col-lg-3 service_continer">
-                                        <Service
-                                            lable='ماهي هذه الخدمة ؟ '
-                                            name_ar={service.name_ar}
-                                            name_en={service.name_en}
-                                            icon={service.icon}
-                                            handleClick={() => this.showServiceInfo(service)}
-                                            backgroundImg={service.backgroundImg}></Service>
-                                    </div>))}
-                            </div>
+                            {/* <div className="row justify-content-center table-row"> */}
+                            <TransitionGroup className="row justify-content-center table-row">
+                                {allServices.map((service, index) => (
+                                    <CSSTransition
+                                        timeout={1000}
+                                        classNames='fade'
+                                        key={index}
+                                    // appear={true}
+                                    // in={mounted}
+                                    >
+                                        <div className="col-md-6 col-lg-3 service_continer">
+                                            <Service
+                                                key={index}
+                                                lable='ماهي هذه الخدمة ؟ '
+                                                name_ar={service.name_ar}
+                                                name_en={service.name_en}
+                                                icon={service.icon}
+                                                handleClick={() => this.showServiceInfo(service)}
+                                                backgroundImg={service.backgroundImg}>
+                                            </Service>
+                                        </div>
+                                    </CSSTransition>
+                                ))}
+                            </TransitionGroup>
+                            {/* </div> */}
                         </>}
 
 
                     </div>
                 </div>
-            </main>
+            </main >
         )
 
     }
