@@ -771,6 +771,7 @@ margin: 3% 0;
 
 .fade_design{
   animation: fade 1000ms ;
+  animation-delay: 0s;
   animation-fill-mode:forwards;
 }
 
