@@ -49,17 +49,17 @@ function AboutUs() {
                     <table ref={tableRef}>
                         <tbody>
                             <tr>
-                                <td><span className={UseOnScreen(tableRef) ? 'fade_design' : null}>تصميم</span></td>
+                                <td><span className={UseOnScreen(tableRef) && 'fade_design'}>تصميم</span></td>
                                 <td><img style={{ width: '30%' }} src={deco} alt="" /></td>
-                                <td><span className={UseOnScreen(tableRef) ? 'fade_art' : null}>عمل فني</span></td>
+                                <td><span className={UseOnScreen(tableRef) && 'fade_art'}>عمل فني</span></td>
                                 <td><img src={deco} style={{ width: '30%' }} alt="" /></td>
                             </tr>
                             <Statics />
                             <tr>
                                 <td><img src={deco} style={{ width: '30%' }} alt="" /></td>
-                                <td><span className={UseOnScreen(tableRef) ? 'fade_clint' : null}>عميل</span></td>
+                                <td><span className={UseOnScreen(tableRef) && 'fade_clint'}>عميل</span></td>
                                 <td><img src={deco} style={{ width: '30%' }} alt="" /></td>
-                                <td><span className={UseOnScreen(tableRef) ? 'fade_pro' : null}>إنتاج إعلامي</span></td>
+                                <td><span className={UseOnScreen(tableRef) && 'fade_pro'}>إنتاج إعلامي</span></td>
                             </tr>
                         </tbody>
                     </table>
