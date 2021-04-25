@@ -13,7 +13,7 @@
 }
 .rightElement-exit-active {
   transform: translatex(100%);
-  transition: transform 300ms ease-out;
+  transition: transform 9500ms ease-out;
 }
 
 
@@ -49,7 +49,7 @@
 }
 .leftElement-exit-active {
   transform: translatex(-100%);
-  transition: transform 300ms ease-out;
+  transition: transform 9500ms ease-out;
 }
 
 .terms_agreement{
@@ -751,6 +751,18 @@ margin: 3% 0;
   animation: enter 2000ms ;
 }
 
+.FP_Btns_entering{
+  opacity: 0;
+  animation: enter_apper 2000ms ;
+  animation-fill-mode:forwards;
+
+}
+
+.FP_Btns_exiting{
+  animation: exit 2000ms ;
+  animation-fill-mode:forwards;
+
+}
 
 .fade{
   animation: fade 500ms ;
@@ -779,6 +791,28 @@ margin: 3% 0;
   animation: fade 1500ms ;
   animation-delay:3500ms;
   animation-fill-mode:forwards;
+}
+
+@keyframes enter_apper{
+  0%{
+    opacity: 0;
+    transform: translatex(100%);
+  }
+  100%{
+    opacity: 1;
+      transform: translatex(0%);
+  }
+}
+
+@keyframes exit{
+  0%{
+    opacity: 1;
+    transform: translatex(0%);
+  }
+  100%{
+    opacity: 0;
+      transform: translatex(100%);
+  }
 }
 
 @keyframes enter{

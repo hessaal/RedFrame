@@ -11,13 +11,16 @@ classname: is button class name (empty by default)
 id: is button id (empty by default)
 
 */
-const Button = ({ label, handleClick, type = 'button', classname = '', id = '' }) => {
+const Button = ({ label, handleClick, type = 'button', classname = '', id = '', delay = 0 }) => {
     return (
         <button
             id={id}
             className={classname}
             type={type}
             onClick={handleClick}
+            style={{
+                animationDelay: `${delay * .5}s`
+            }}
         >{label}
         </button>
 
