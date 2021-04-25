@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/RedFrame/static/css/main.2b416fcc.chunk.css",
+    "main.css": "/RedFrame/static/css/main.4c4c0556.chunk.css",
     "main.js": "/RedFrame/static/js/main.7b936f4e.chunk.js",
     "main.js.map": "/RedFrame/static/js/main.7b936f4e.chunk.js.map",
     "runtime-main.js": "/RedFrame/static/js/runtime-main.84734f18.js",
@@ -12,7 +12,7 @@
     "static/js/3.c32c6e6b.chunk.js.map": "/RedFrame/static/js/3.c32c6e6b.chunk.js.map",
     "index.html": "/RedFrame/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/RedFrame/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.2b416fcc.chunk.css.map": "/RedFrame/static/css/main.2b416fcc.chunk.css.map",
+    "static/css/main.4c4c0556.chunk.css.map": "/RedFrame/static/css/main.4c4c0556.chunk.css.map",
     "static/js/2.34b8a1d4.chunk.js.LICENSE.txt": "/RedFrame/static/js/2.34b8a1d4.chunk.js.LICENSE.txt",
     "static/media/Path.png": "/RedFrame/static/media/Path.6ae88a08.png",
     "static/media/Qmark.png": "/RedFrame/static/media/Qmark.0e17530b.png",
@@ -33,7 +33,7 @@
     "static/js/runtime-main.84734f18.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.34b8a1d4.chunk.js",
-    "static/css/main.2b416fcc.chunk.css",
+    "static/css/main.4c4c0556.chunk.css",
     "static/js/main.7b936f4e.chunk.js"
   ]
 }
