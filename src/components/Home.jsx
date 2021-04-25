@@ -28,10 +28,10 @@ export class Home extends Component {
     }
 
     // these 4 function redirect the browser to spicific path
-    gotoProject = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/projects'), 9500); }
-    gotoOrder = () => { this.props.history.push('/order') }
-    gotoAbout = () => { this.props.history.push('/about-us') }
-    gotoServies = () => { this.props.history.push('/services') }
+    gotoProject = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/projects'), 4500); }
+    gotoOrder = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/order'), 4500); }
+    gotoAbout = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/about-us'), 4500); }
+    gotoServies = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/services'), 4500); }
 
     // goToNext function show the next service on the div that represent services
     goToNext = () => {
@@ -84,7 +84,7 @@ export class Home extends Component {
             <div >
                 <div className='row my-5 ml-5'>
                     <CSSTransition
-                        timeout={{ enter: 500, exit: 9500 }}
+                        timeout={{ enter: 4000, exit: 4500 }}
                         classNames='leftElement'
                         in={this.state.show}
                     >
@@ -113,18 +113,10 @@ export class Home extends Component {
                             </div></div>
                     </CSSTransition>
 
-
-                    {/* <CSSTransition
-                        timeout={1000}
-                        classNames='rightElement'
-                        in={this.state.show}
-                    > */}
-                    <div className={this.state.show ? ' rightElement col-md-6 col-xs-12 ' : '  FP_Btns_exiting col-md-6 col-xs-12 '} style={{
-                        animationDelay: `${7 * .5}s`
-                    }}>
+                    <div className={this.state.show ? ' FP_container_entering col-md-6 col-xs-12 ' : '  FP_container_exiting col-md-6 col-xs-12 '}>
                         <img src={whiteDeco} id='white_deco' alt="" />
                         <div className='row right_side'>
-                            <Button classname={this.state.show ? "col col-md-3 FP_Btns_spacial FP_Btns_entering" : "col col-md-3 FP_Btns_spacial FP_Btns_exiting"} label={<div> <div className="icon_box"><FontAwesomeIcon className="icon_first" icon={faCheck} /></div> <p>تواصل معنا <br />وتقـدم بطلبك</p></div>} handleClick={this.gotoOrder} delay={this.state.show ? 1 : 5} />
+                            <Button classname={this.state.show ? "col col-md-3 FP_Btns_spacial FP_Btns_entering" : "col col-md-3 FP_Btns_spacial FP_Btns_exiting"} label={<div> <div className="icon_box"><FontAwesomeIcon className="icon_first" icon={faCheck} /></div> <p>تواصل معنا <br />وتقـدم بطلبك</p></div>} handleClick={this.gotoOrder} delay={this.state.show ? 1.5 : 5} />
                             <div className="col col-md-5">
 
                                 <Button id='FB' classname={this.state.show ? "row FP_Btns FP_Btns_entering" : "row FP_Btns FP_Btns_exiting"} label="من نحن ؟" handleClick={this.gotoAbout} delay={this.state.show ? 3 : 1} />
@@ -132,11 +124,10 @@ export class Home extends Component {
                                 <Button id='TB' classname={this.state.show ? "row FP_Btns FP_Btns_entering" : "row FP_Btns FP_Btns_exiting"} label="من أعمالنا" handleClick={this.gotoProject} delay={this.state.show ? 5 : 3} />
                             </div></div>
                     </div>
-                    {/* </CSSTransition> */}
                 </div>
                 <CSSTransition
-                    timeout={{ enter: 500, exit: 9500 }}
-                    classNames='rightElement'
+                    timeout={{ enter: 4000, exit: 4500 }}
+                    classNames='bottomElement'
                     in={this.state.show}
                 >
                     <div className='row bottom_side' >

@@ -15,11 +15,11 @@ export class EndPhase extends Component {
         return (
 
             <div className="container text-center">
-                <div className='row justify-content-center'>
+                <div className='row justify-content-center slide_up'>
                     <FontAwesomeIcon icon={faSmileBeam} className='icon_end' />
                 </div>
-                <p id="order_scusses">تم إرسال طلبك بنجاح</p>
-                <Button classname='whatsup_btn whiteColor'
+                <p id="order_scusses" className='slide_up' style={{ animationDelay: '1000ms' }}>تم إرسال طلبك بنجاح</p>
+                <Button classname='whatsup_btn whiteColor slide_up' delay={2}
                     label={<><p>لمزيد من الاستفسارات <br />تفضل بمحادثتنا على<br /> تطبيق الواتساب </p>
                         <FontAwesomeIcon icon={faWhatsapp} className='icon_whatsup whiteColor' /></>}
                     handleClick={this.handleClick} />

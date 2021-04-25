@@ -23,40 +23,19 @@ function Header() {
             </Navbar.Toggle>
 
             {/* nav bar item list  */}
-            <CSSTransition
-                timeout={300}
-                classNames='showNav'
-                in={show}
-                unmountOnExit
-            >
-                <div className="collapse navbar-collapse show" id="navbarNav">
-                    <CSSTransition
-                        timeout={1}
-                        classNames='showInsideNav'
-                        in={show}
-                        unmountOnExit
-                    >
-                        <Navbar.Toggle className="float-right "
-                            id='toggle_btn' aria-controls="basic-navbar-nav"
-                            onClick={() => { setShow(!show) }} >
-                            <FontAwesomeIcon id='icon' icon={faTimes} />
-                        </Navbar.Toggle>
-                    </CSSTransition>
-                    <CSSTransition
-                        timeout={1}
-                        classNames='showInsideNav'
-                        in={show}
-                        unmountOnExit
-                    >
-                        <Nav className=" mt-5 mr-5">
-                            <NavLink className="navItem_style whiteColor" to="/about-us" onClick={() => { setShow(!show) }}>من نحن ؟</NavLink>
-                            <NavLink className="navItem_style whiteColor" to="/services" onClick={() => { setShow(!show) }}>خدماتنا</NavLink>
-                            <NavLink className="navItem_style whiteColor" to="/projects" onClick={() => { setShow(!show) }}>أعمالنا</NavLink>
-                            <NavLink className="navItem_style whiteColor" to="/order" onClick={() => { setShow(!show) }}>تواصل معنا وتقدم بطلبك</NavLink>
-                        </Nav>
-                    </CSSTransition>
-                </div>
-            </CSSTransition>
+            <div className={show ? "showNav" : "hideNav"} id="navbarNav">
+                <Navbar.Toggle className="float-right "
+                    id='toggle_btn' aria-controls="basic-navbar-nav"
+                    onClick={() => { setShow(!show) }} >
+                    <FontAwesomeIcon id='icon' icon={faTimes} />
+                </Navbar.Toggle>
+                <Nav className=" mt-5 mr-5">
+                    <NavLink className="navItem_style whiteColor" to="/about-us" onClick={() => { setShow(!show) }}>من نحن ؟</NavLink>
+                    <NavLink className="navItem_style whiteColor" to="/services" onClick={() => { setShow(!show) }}>خدماتنا</NavLink>
+                    <NavLink className="navItem_style whiteColor" to="/projects" onClick={() => { setShow(!show) }}>أعمالنا</NavLink>
+                    <NavLink className="navItem_style whiteColor" to="/order" onClick={() => { setShow(!show) }}>تواصل معنا وتقدم بطلبك</NavLink>
+                </Nav>
+            </div>
         </Navbar >
 
 

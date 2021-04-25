@@ -13,7 +13,7 @@ name_en : is the service name in english
 
 */
 
-const ServiceSample = ({ backgroundImg, name_ar, name_en, icon }) => {
+const ServiceSample = ({ backgroundImg, name_ar, name_en, icon, index, classname = '' }) => {
 
     const background_image = require('./../../Assets/' + backgroundImg + '.png').default;
     const icon_image = require('./../../Assets/' + icon + '.png').default;
@@ -21,8 +21,9 @@ const ServiceSample = ({ backgroundImg, name_ar, name_en, icon }) => {
     return (
         <div style={{
             backgroundImage: `url(${background_image})`,
-            backgroundSize: '100% 100%'
-        }} className='sample'>
+            backgroundSize: '100% 100%',
+            animationDelay: `${index * .5}s`
+        }} className={classname !== '' ? classname : 'sample'}>
 
             <div className="titles">
                 <img src={icon_image} className="service_icon" alt="service icon" />

@@ -16,8 +16,8 @@ export class SelectService extends Component {
         this.state = {
             // services will get the red frame services from the service file or from data base
             services: getServices(),
-
             showInfo: false,
+            hideInfo: true,
             service: {},
             selected: false
         }
@@ -73,14 +73,14 @@ export class SelectService extends Component {
     */
     showServiceInfo = (service) => {
         if (this.state.service.id === service.id) {
-            this.setState({ showInfo: false, service: {} })
+            this.setState({ hideInfo: true }); setTimeout(() => this.setState({ showInfo: false, service: {} }), 1800);
         } else {
-            this.setState({ showInfo: true, service: service });
+            this.setState({ showInfo: true, service: service, hideInfo: false });
         }
     }
 
     render() {
-        const { services: allServices, showInfo, service } = this.state;
+        const { services: allServices, showInfo, service, hideInfo } = this.state;
         const { length: count } = allServices;
         return (
             <main style={{ backgroundColor: 'white', padding: '10px', paddingTop: '0', direction: 'rtl' }}>
@@ -88,16 +88,16 @@ export class SelectService extends Component {
                     {count === 0 ? <p id="no_services">لا تتوفر أي خدمات حالياً ..</p> : <>
                         {/* show info div */}
                         {showInfo && <div className="row" tabIndex="0" ref={this.infoRef} style={{ outline: 'none' }}>
-                            <div className='col-4 align-self-center'>
+                            <div className={hideInfo ? 'col-4 align-self-center left_exiting ' : 'col-4 align-self-center left_entering'}>
                                 <ServiceSample
                                     backgroundImg={service.backgroundImg}
                                     name_en={service.name_en}
                                     name_ar={service.name_ar}
                                     icon={service.icon} /></div>
-                            <div id="info" className='col-7'>
+                            <div id="info" className={hideInfo ? 'col-7  left_exiting ' : 'col-7 left_entering'} style={hideInfo ? {} : { animationDelay: '500ms' }}>
                                 <Button classname="controls float-right"
                                     label={<FontAwesomeIcon icon={faTimes} />}
-                                    handleClick={() => { this.setState({ showInfo: false }) }} />
+                                    handleClick={() => { this.setState({ hideInfo: true }); setTimeout(() => this.setState({ showInfo: false }), 1800); }} />
                                 <h3 id="info_title" >خدمة {service.name_ar}</h3><p id="info_body">{service.info}</p>
                             </div>
                         </div>

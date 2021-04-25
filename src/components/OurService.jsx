@@ -11,20 +11,35 @@ export class OurService extends Component {
     state = {
         services: getServices(),
         showInfo: false,
+        hideInfo: true,
         service: {}
     }
+
+    // this refrence to the service info div  
+    infoRef = React.createRef();
 
     // showServiceInfo will handle the clicks on "what is this service" button and show the service info
     showServiceInfo = (service) => {
         if (this.state.service.id === service.id) {
-            this.setState({ showInfo: false, service: {} })
+            this.setState({ hideInfo: true }); setTimeout(() => this.setState({ showInfo: false, service: {} }), 1800);
         } else
-            this.setState({ showInfo: true, service: service });
+            this.setState({ showInfo: true, service: service, hideInfo: false });
 
     }
 
+    componentDidMount() {
+
+        // if service info div show up this will foucs the screen view on it
+        if (this.state.showInfo)
+            this.infoRef.current.focus();
+    }
+    componentDidUpdate() {
+        if (this.state.showInfo)
+            this.infoRef.current.focus();
+    }
+
     render() {
-        const { services: allServices, showInfo, service } = this.state;
+        const { services: allServices, showInfo, service, hideInfo } = this.state;
         const { length: count } = allServices;
 
         return (
@@ -35,17 +50,17 @@ export class OurService extends Component {
                         {count === 0 ? <p id="no_services">لا تتوفر أي خدمات حالياً ..</p> : <>
 
                             {/* this will apper if user ask for more info about service */}
-                            {showInfo && <div className="row">
-                                <div className='col-4 align-self-center'>
+                            {showInfo && <div className="row" tabIndex="0" ref={this.infoRef} style={{ outline: 'none' }}>
+                                <div className={hideInfo ? 'col-4 align-self-center left_exiting ' : 'col-4 align-self-center left_entering'}>
                                     <ServiceSample
                                         backgroundImg={service.backgroundImg}
                                         name_en={service.name_en}
                                         name_ar={service.name_ar}
                                         icon={service.icon} /></div>
-                                <div id="info" className='col-7'>
+                                <div id="info" className={hideInfo ? 'col-7  left_exiting ' : 'col-7 left_entering'} style={hideInfo ? {} : { animationDelay: '500ms' }} >
                                     <Button classname="controls float-right"
                                         label={<FontAwesomeIcon icon={faTimes} />}
-                                        handleClick={() => { this.setState({ showInfo: false }) }} />
+                                        handleClick={() => { this.setState({ hideInfo: true }); setTimeout(() => this.setState({ showInfo: false }), 1800); }} />
                                     <h3 id="info_title">خدمة {service.name_ar}</h3><p id="info_body">{service.info}</p>
                                 </div>
                             </div>

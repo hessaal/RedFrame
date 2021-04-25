@@ -107,7 +107,7 @@ export class ServiceForm extends Form {
                         </div>
                         {data.hasBranding === 'no' &&
                             <div className="row m-3">
-                                <div className="col-md-6 align-self-center position-relative">
+                                <div className="col-md-6 align-self-center position-relative left_entering">
                                     <svg height='100%' width='100%'>
                                         <circle cx="50%" cy="50%" r="53"
                                             stroke='#C92C37'
@@ -144,7 +144,7 @@ export class ServiceForm extends Form {
                                     </svg>
 
                                 </div>
-                                <div className="col-md-6">
+                                <div className="col-md-6 left_entering " style={{ animationDelay: '500ms' }}>
                                     <Card
                                         lableFb={<FontAwesomeIcon className="icon_select whiteColor" icon={faCheck} />}
                                         lableSb='ماهي هذه الخدمة ؟ '
@@ -156,7 +156,7 @@ export class ServiceForm extends Form {
                                         backgroundImg={service.backgroundImg}
                                         select={select}
                                     /></div>
-                                {showInfo && <div id="info" className="mt-2">
+                                {showInfo && <div id="info" className="mt-2 left_entering">
                                     <Button classname="controls float-right"
                                         label={<FontAwesomeIcon icon={faTimes} />}
                                         handleClick={() => { this.setState({ showInfo: false }) }} />
