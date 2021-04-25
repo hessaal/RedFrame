@@ -21,17 +21,15 @@ export class Home extends Component {
             service: getService(1),
             id: 1,
             serviceCount: getServicesCount(),
-            assos_num: 10,
-            assos_start: 0,
             show: false
         }
     }
 
     // these 4 function redirect the browser to spicific path
-    gotoProject = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/projects'), 4500); }
-    gotoOrder = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/order'), 4500); }
-    gotoAbout = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/about-us'), 4500); }
-    gotoServies = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/services'), 4500); }
+    gotoProject = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/projects'), 3000); }
+    gotoOrder = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/order'), 3000); }
+    gotoAbout = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/about-us'), 3000); }
+    gotoServies = () => { this.setState({ show: false }); setTimeout(() => this.props.history.push('/services'), 3000); }
 
     // goToNext function show the next service on the div that represent services
     goToNext = () => {
@@ -84,7 +82,7 @@ export class Home extends Component {
             <div >
                 <div className='row my-5 ml-5'>
                     <CSSTransition
-                        timeout={{ enter: 4000, exit: 4500 }}
+                        timeout={{ enter: 2500, exit: 3500 }}
                         classNames='leftElement'
                         in={this.state.show}
                     >
@@ -126,7 +124,7 @@ export class Home extends Component {
                     </div>
                 </div>
                 <CSSTransition
-                    timeout={{ enter: 4000, exit: 4500 }}
+                    timeout={{ enter: 2500, exit: 3500 }}
                     classNames='bottomElement'
                     in={this.state.show}
                 >

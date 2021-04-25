@@ -77,6 +77,8 @@ class Form extends Component {
             case "string.regex.base":
                 if (field_name === 'الاسم الكامل')
                     msg = `خانة ${field_name} يجب أن تتكون من حروف فقط`
+                else if (field_name === 'تفاصيل الطلب')
+                    msg = `خانة ${field_name} يجب أن لا تحتوي على رموز `
                 else
                     msg = `خانة ${field_name} يجب أن تتكون من 10 أرقام فقط`
                 break;

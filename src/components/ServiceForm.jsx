@@ -32,7 +32,7 @@ export class ServiceForm extends Form {
         email: Joi.string().email().required(),
         commercialRegister: Joi.string().regex(/^[0-9]{10}$/),
         priority: Joi.string().required(),
-        orderDes: Joi.string().alphanum().max(400).required(),
+        orderDes: Joi.string().regex(/[\u0621-\u064Aa-zA-Z0-9]/).max(400).required(),
         hasBranding: Joi.string().required()
     }
 
