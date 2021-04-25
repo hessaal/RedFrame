@@ -23,7 +23,7 @@ select: is boolen varible to indicte if the div is selected to change the select
 
 */
 
-const Card = ({ backgroundImg, icon, name_ar, name_en, lableFb, handleClickFb, lableSb, handleClickSb, select }) => {
+const Card = ({ index, backgroundImg, icon, name_ar, name_en, lableFb, handleClickFb, lableSb, handleClickSb, select }) => {
 
   const background_image = require('./../../Assets/' + backgroundImg + '.png').default;
   const icon_image = require('./../../Assets/' + icon + '.png').default;
@@ -31,10 +31,11 @@ const Card = ({ backgroundImg, icon, name_ar, name_en, lableFb, handleClickFb, l
   return (
 
     <div onClick={handleClickFb}
-      className="service_card"
+      className="service_card fade"
       style={{
         backgroundImage: `url(${background_image})`,
-        backgroundSize: '100% 100%'
+        backgroundSize: '100% 100%',
+        animationDelay: `${index * .5}s`
       }}>
 
       <Button classname={select ? "selected whiteColor float-right whiteColor" : "select whiteColor whiteColor float-right"} label={lableFb} handleClick={handleClickFb} />

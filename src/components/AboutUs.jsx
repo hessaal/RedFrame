@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import deco from './../Assets/AboutUsDeco.png'
 import Map from "./common/MapContainer";
 import Qmark from './../Assets/Qmark.png'
@@ -6,7 +6,6 @@ import small_logo from './../Assets/small_logo.png'
 import PageHeader from './common/PageHeader';
 import Statics from './common/Statics';
 import UseOnScreen from './common/UseOnScreen'
-import { CSSTransition } from 'react-transition-group';
 
 // this page represent about us page
 function AboutUs() {

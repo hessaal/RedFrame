@@ -20,17 +20,18 @@ classname: is button class name (empty by default)
 */
 
 
-const Service = ({ key, backgroundImg, icon, name_ar, name_en, lable, handleClick, classname = '' }) => {
+const Service = ({ index, backgroundImg, icon, name_ar, name_en, lable, handleClick, classname = '' }) => {
 
     const background_image = require('./../../Assets/' + backgroundImg + '.png').default;
     const icon_image = require('./../../Assets/' + icon + '.png').default;
 
     return (
-        <div key={key} style={{
+        <div style={{
             backgroundImage: `url(${background_image})`,
-            backgroundSize: '100% 100%'
+            backgroundSize: '100% 100%',
+            animationDelay: `${index * .5}s`
         }}
-            className={classname !== '' ? classname : "service"}>
+            className={classname !== '' ? classname : "service fade"}>
 
             <div className="titles">
                 <img src={icon_image} className="service_icon" alt="service icon" />

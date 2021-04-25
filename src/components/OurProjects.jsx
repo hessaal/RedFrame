@@ -40,9 +40,10 @@ export class OurProjects extends Component {
                     </div>
                     {/* projects */}
                     <div className="row">
-                        {projects.map(project => (
+                        {projects.map((project, index) => (
                             <div className="col-md-6 col-lg-4 service_continer">
                                 <Project
+                                    index={index}
                                     backgroundImg={project.backgroundImg}
                                     status={project.status}
                                     name={project.name} />

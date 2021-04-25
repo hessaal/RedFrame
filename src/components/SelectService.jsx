@@ -106,7 +106,9 @@ export class SelectService extends Component {
                         <div className="row justify-content-center table-row">
                             {allServices.map((service, index) => (
                                 <div className="col-md-6 col-lg-3 service_continer " key={index}>
-                                    <Card lableFb={<FontAwesomeIcon className="icon_select whiteColor" icon={faCheck} />}
+                                    <Card
+                                        index={index}
+                                        lableFb={<FontAwesomeIcon className="icon_select whiteColor" icon={faCheck} />}
                                         lableSb='ماهي هذه الخدمة ؟'
                                         name_ar={service.name_ar}
                                         name_en={service.name_en}
