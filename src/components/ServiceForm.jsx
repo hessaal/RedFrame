@@ -112,7 +112,7 @@ export class ServiceForm extends Form {
                                     <svg height='100%' width='100%'>
                                         <circle cx="50%" cy="50%" r="53"
                                             stroke='#C92C37'
-                                            stroke-width="1"
+                                            strokeWidth="1"
                                             fill="none"
                                             strokeOpacity="0.2"
                                         />
@@ -122,25 +122,25 @@ export class ServiceForm extends Form {
                                             fillOpacity='0.2'
                                         />
                                         <text x="50%" y="10%"
-                                            text-anchor="middle"
+                                            textAnchor="middle"
                                             fill='black'
-                                            font-size="1.2rem"
-                                            font-weight="bold"
+                                            fontSize="1.2rem"
+                                            fontWeight="bold"
                                         >لا تقلق !</text>
                                         <text x="50%" y="35%"
-                                            text-anchor="middle"
+                                            textAnchor="middle"
                                             fill='black'
-                                            font-size="1rem"
+                                            fontSize="1rem"
                                         >تتوفر هذه الخدمة </text>
                                         <text x="50%" y="55%"
-                                            text-anchor="middle"
+                                            textAnchor="middle"
                                             fill='black'
-                                            font-size="1rem"
+                                            fontSize="1rem"
                                         >  لدينا بأسعار مميزة</text>
                                         <text x="50%" y="75%"
-                                            text-anchor="middle"
+                                            textAnchor="middle"
                                             fill='black'
-                                            font-size="1rem"
+                                            fontSize="1rem"
                                         > ودقة في الاداء</text>
                                     </svg>
 

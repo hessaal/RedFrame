@@ -41,7 +41,7 @@ export class OurProjects extends Component {
                     {/* projects */}
                     <div className="row">
                         {projects.map((project, index) => (
-                            <div className="col-md-6 col-lg-4 service_continer">
+                            <div className="col-md-6 col-lg-4 service_continer" key={project + index}>
                                 <Project
                                     index={index}
                                     backgroundImg={project.backgroundImg}

@@ -69,7 +69,7 @@ export class OurService extends Component {
                             {/* this shows red frame services */}
                             <div className={showInfo ? "slide_down row justify-content-center table-row" : "row justify-content-center table-row slide_back"} >
                                 {allServices.map((service, index) => (
-                                    <div className="col-md-6 col-lg-3 service_continer" >
+                                    <div className="col-md-6 col-lg-3 service_continer" key={service + index} >
                                         <Service
                                             index={index}
                                             lable='ماهي هذه الخدمة ؟ '

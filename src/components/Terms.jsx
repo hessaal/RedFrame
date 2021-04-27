@@ -53,7 +53,7 @@ export class Terms extends Component {
                         </div>
 
                         {services.map((service, index) => (
-                            <div className="row" >
+                            <div className="row" key={service + index} >
                                 <ServiceSample
                                     index={index}
                                     name_ar={service.name_ar}

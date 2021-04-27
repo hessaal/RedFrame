@@ -30,7 +30,7 @@ function AboutUs() {
                             <img src={Qmark} alt="Qustion mark" id='Qmark' />
                         </div>
                         <div className="col-md-10 ">
-                            <p ref={QTextRef} id={UseOnScreen(QTextRef) && "QText"} className="text">ﻣﺆﺳﺴﺔ إﻃﺎر أﺣﻤﺮ <img src={small_logo} style={{ width: '18%', backgroundColor: 'black' }} alt="red frame"></img> ﻣﺆﺳﺴﺔ  ﺳﻌﻮدﻳﺔ،
+                            <p ref={QTextRef} id={UseOnScreen(QTextRef) ? "QText" : ''} className="text">ﻣﺆﺳﺴﺔ إﻃﺎر أﺣﻤﺮ <img src={small_logo} style={{ width: '18%', backgroundColor: 'black' }} alt="red frame"></img> ﻣﺆﺳﺴﺔ  ﺳﻌﻮدﻳﺔ،
                             ﻣﻘﺮﻫﺎ اﻟﺮﺋﻴﺴﻲ ﻣﺪﻳﻨﺔ اﻟﺮﻳﺎض ﺑﺎﻟﻤﻤﻠﻜﺔ اﻟﻌﺮﺑﻴﺔ اﻟﺴﻌﻮدﻳﺔ. ﺗﻘﺪم ﺧﺪﻣﺎت إﻋﻼﻣﻴﺔ ﺗﺘﻔﻖ ﻣﻊ ﻃﺒﻴﻌﺔ اﻟﻌﺼﺮ اﻟﺤﺪﻳﺚ اﻟﺬي ﻳﻤﺘﺎز ﺑﺎﻟﺴﺮﻋﺔ
                             واﻟﺠﻮدة واﻹﺑﺪاع. وﻻ ﻳﺘﻌﻠﻖ اﻷﻣﺮ ﺑﺎﻗﺘﺮاح ﻣﺎ ﻳﺘﻌﻴﻦ ﻗﻮﻟﻪ أو ﻓﻌﻠﻪ ﻓﺤﺴﺐ.
                             ﺑﻞ ﺗﻮاﻛﺐ أﺣﺪث اﻟﻤﻤﺎرﺳﺎت اﻟﺬﻛﻴﺔ اﻟﺘﻲ ﺗﻨﺘﺞ أﻋﻤﺎﻻ ﻣﺒﺘﻜﺮة. اﻟﺘﺠﺎرب اﻟﻨﺎﺟﺤﺔ ﻟﻠﺸﺮﻛﺎت ﺳﺎﻋﺪت ﻓﻲ ﺗﻜﻮﻳﻦ ﺛﺮوة ﻣﻌﺮﻓﻴﺔ ﻻ ﺗﻘﺪر ﺑﺜﻤﻦ، وﺑﺎﻟﺘﺎﻟﻲ اﻟﻘﺪرة ﻋﻠﻰ وﺿﻊ ﺧﻴﺎرات وﺑﺪاﺋﻞ ﻣﺘﺠﺪدة، ﻟﻴﻨﻌﻢ اﻟﺸﺮﻛﺎء ﺑﺮاﺣﺔ اﻟﺒﺎل واﻻﻃﻤﺌﻨﺎن
@@ -48,23 +48,23 @@ function AboutUs() {
                     <table ref={tableRef}>
                         <tbody>
                             <tr>
-                                <td><span className={UseOnScreen(tableRef) && 'fade'} style={{ animationDelay: '0ms' }}>تصميم</span></td>
+                                <td><span className={UseOnScreen(tableRef) ? 'fade' : ''} style={{ animationDelay: '0ms' }}>تصميم</span></td>
                                 <td><img style={{ width: '30%' }} src={deco} alt="" /></td>
-                                <td><span className={UseOnScreen(tableRef) && 'fade'} style={{ animationDelay: '2000ms' }}>عمل فني</span></td>
+                                <td><span className={UseOnScreen(tableRef) ? 'fade' : ''} style={{ animationDelay: '2000ms' }}>عمل فني</span></td>
                                 <td><img src={deco} style={{ width: '30%' }} alt="" /></td>
                             </tr>
                             <Statics />
                             <tr>
                                 <td><img src={deco} style={{ width: '30%' }} alt="" /></td>
-                                <td><span className={UseOnScreen(tableRef) && 'fade'} style={{ animationDelay: '1000ms' }}>عميل</span></td>
+                                <td><span className={UseOnScreen(tableRef) ? 'fade' : ''} style={{ animationDelay: '1000ms' }}>عميل</span></td>
                                 <td><img src={deco} style={{ width: '30%' }} alt="" /></td>
-                                <td><span className={UseOnScreen(tableRef) && 'fade'} style={{ animationDelay: '3000ms' }}>إنتاج إعلامي</span></td>
+                                <td><span className={UseOnScreen(tableRef) ? 'fade' : ''} style={{ animationDelay: '3000ms' }}>إنتاج إعلامي</span></td>
                             </tr>
                         </tbody>
                     </table>
                     <h2 ref={sHeadline} className={UseOnScreen(sHeadline) ? "headlines entering" : "headlines"}>أين موقعنا</h2>
                     <address>الرياض</address>
-                    <div ref={mapRef} id="mapcontainer" className={UseOnScreen(mapRef) && 'entering'}>
+                    <div ref={mapRef} id="mapcontainer" className={UseOnScreen(mapRef) ? 'entering' : ''}>
                         <Map />
                     </div>
                 </div ></div>
