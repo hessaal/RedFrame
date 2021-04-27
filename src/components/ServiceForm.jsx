@@ -20,6 +20,7 @@ export class ServiceForm extends Form {
         // brandig service
         service: getService(4),
         showInfo: false,
+        hideInfo: true,
         select: false,
         checked: false
     }
@@ -78,11 +79,11 @@ export class ServiceForm extends Form {
 
     // show branding service info 
     showServiceInfo = () => {
-        this.setState({ showInfo: !this.state.showInfo });
+        this.setState({ showInfo: !this.state.showInfo, hideInfo: false });
     }
 
     render() {
-        const { data, errors, service, showInfo, select } = this.state
+        const { data, errors, service, showInfo, select, hideInfo } = this.state
         return (
             <main style={{ backgroundColor: 'white', padding: '10px', paddingTop: '0', direction: 'rtl', textAlign: 'center' }}>
                 <div className="container service_continer flex-row-reverse">
@@ -156,10 +157,10 @@ export class ServiceForm extends Form {
                                         backgroundImg={service.backgroundImg}
                                         select={select}
                                     /></div>
-                                {showInfo && <div id="info" className="mt-2 left_entering">
+                                {showInfo && <div id="info" className={hideInfo ? "mt-2 left_exiting" : "mt-2 left_entering"}>
                                     <Button classname="controls float-right"
                                         label={<FontAwesomeIcon icon={faTimes} />}
-                                        handleClick={() => { this.setState({ showInfo: false }) }} />
+                                        handleClick={() => { this.setState({ hideInfo: true }); setTimeout(() => this.setState({ showInfo: false }), 900); }} />
                                     <h3 id="info_title">خدمة {service.name_ar}</h3><p id="info_body">{service.info}</p></div>}
                             </div>}
                         <textarea placeholder=" تفاصيل الطلب ..." name="orderDes" rows='4' onChange={this.handleChange} />

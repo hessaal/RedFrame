@@ -19,7 +19,7 @@ const Button = ({ label, handleClick, type = 'button', classname = '', id = '', 
             type={type}
             onClick={handleClick}
             style={{
-                animationDelay: `${delay * .5}s`
+                animationDelay: `${delay * .25}s`
             }}
         >{label}
         </button>

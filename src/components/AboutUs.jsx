@@ -48,17 +48,17 @@ function AboutUs() {
                     <table ref={tableRef}>
                         <tbody>
                             <tr>
-                                <td><span className={UseOnScreen(tableRef) && 'fade_design'}>تصميم</span></td>
+                                <td><span className={UseOnScreen(tableRef) && 'fade'} style={{ animationDelay: '0ms' }}>تصميم</span></td>
                                 <td><img style={{ width: '30%' }} src={deco} alt="" /></td>
-                                <td><span className={UseOnScreen(tableRef) && 'fade_art'}>عمل فني</span></td>
+                                <td><span className={UseOnScreen(tableRef) && 'fade'} style={{ animationDelay: '2000ms' }}>عمل فني</span></td>
                                 <td><img src={deco} style={{ width: '30%' }} alt="" /></td>
                             </tr>
                             <Statics />
                             <tr>
                                 <td><img src={deco} style={{ width: '30%' }} alt="" /></td>
-                                <td><span className={UseOnScreen(tableRef) && 'fade_clint'}>عميل</span></td>
+                                <td><span className={UseOnScreen(tableRef) && 'fade'} style={{ animationDelay: '1000ms' }}>عميل</span></td>
                                 <td><img src={deco} style={{ width: '30%' }} alt="" /></td>
-                                <td><span className={UseOnScreen(tableRef) && 'fade_pro'}>إنتاج إعلامي</span></td>
+                                <td><span className={UseOnScreen(tableRef) && 'fade'} style={{ animationDelay: '3000ms' }}>إنتاج إعلامي</span></td>
                             </tr>
                         </tbody>
                     </table>

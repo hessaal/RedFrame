@@ -60,14 +60,14 @@ export class OurService extends Component {
                                 <div id="info" className={hideInfo ? 'col-7  left_exiting ' : 'col-7 left_entering'} style={hideInfo ? {} : { animationDelay: '500ms' }} >
                                     <Button classname="controls float-right"
                                         label={<FontAwesomeIcon icon={faTimes} />}
-                                        handleClick={() => { this.setState({ hideInfo: true }); setTimeout(() => this.setState({ showInfo: false }), 1800); }} />
+                                        handleClick={() => { this.setState({ hideInfo: true }); setTimeout(() => this.setState({ showInfo: false }), 900); }} />
                                     <h3 id="info_title">خدمة {service.name_ar}</h3><p id="info_body">{service.info}</p>
                                 </div>
                             </div>
                             }
 
                             {/* this shows red frame services */}
-                            <div className="row justify-content-center table-row">
+                            <div className={showInfo ? "slide_down row justify-content-center table-row" : "row justify-content-center table-row slide_back"} >
                                 {allServices.map((service, index) => (
                                     <div className="col-md-6 col-lg-3 service_continer" >
                                         <Service

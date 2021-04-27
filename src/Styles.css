@@ -1,29 +1,11 @@
 
-.QElement-enter {
-  transform: translatex(10%);
-}
-
-.QElement-enter-active {
-  transform:translatex(0);
-  transition: transform 500ms ease-in-out;
-}
-
-.QElement-exit {
- transform: translatex(0);
-}
-.QElement-exit-active {
-  transform: translatex(10%);
-  transition: transform 300ms ease-out;
-}
-
-
 .leftElement-enter {
   transform: translatex(-100%);
 }
 
 .leftElement-enter-active {
   transform:translatex(0);
-  transition: transform 2500ms ease-in-out;
+  transition: transform 1500ms ease-in-out;
 }
 
 .leftElement-exit {
@@ -31,7 +13,7 @@
 }
 .leftElement-exit-active {
   transform: translatex(-100%);
-  transition: transform 3500ms ease-out;
+  transition: transform 1500ms ease-out;
 }
 
 
@@ -41,7 +23,7 @@
 
 .bottomElement-enter-active {
   transform:translatey(0);
-  transition: transform 2500ms ease-in-out;
+  transition: transform 1500ms ease-in-out;
 }
 
 .bottomElement-exit {
@@ -49,7 +31,7 @@
 }
 .bottomElement-exit-active {
   transform: translatey(100%);
-  transition: transform 3500ms ease-out;
+  transition: transform 1500ms ease-out;
 }
 
 .terms_agreement{
@@ -337,36 +319,6 @@ line-height: 1.7rem;
     transform: translate3d(0, -30%, 0);
     transition: opacity 500ms, transform 500ms;
   }
-/* 
- 
-.showNav-enter {
-    max-height: 0;
-}
-  .showNav-enter-active {
-    max-height: 100%;
-    transition: max-height 300ms;
-  }
-  .showNav-exit {
-    max-height: 100%;
-  }
-  .showNav-exit-active {
-    max-height: 0;
-    transition:max-height 300ms;
-  }
-   */
-  .showInsideNav-enter {
-    opacity: 0;
-}
-  .showInsideNav-enter-active {
-    opacity: 1;
-  }
-  .showInsideNav-exit {
-    opacity: 1;
-  }
-  .showInsideNav-exit-active {
-    opacity: 0;
-  }
-
 
 #logo{
     width: 30%;
@@ -602,6 +554,7 @@ border: solid 3px #C92C37;}
       padding: 0;
       width: 70%;
       z-index: 0;
+      overflow: 'hidden'
     }
   
     .img_des_text{
@@ -762,75 +715,63 @@ li{
 
 .left_entering{
   opacity: 0;
-  animation: left_enter 2000ms ;
+  animation: left_enter 1000ms ;
   animation-fill-mode:forwards;
 }
 
 .left_exiting{
   opacity: 0;
-  animation: left_exit 2000ms ;
+  animation: left_exit 1000ms ;
   animation-fill-mode:forwards;
 }
 .FP_container_entering{
   opacity: 0;
-  animation: enter_apper 1000ms ;
+  animation: enter_apper 800ms ;
   animation-fill-mode:forwards;
 }
 
 
 .FP_container_exiting{
   animation:exit 800ms ;
-  animation-delay: 2000ms;
+  animation-delay: 1000ms;
   animation-fill-mode:forwards;
 }
 
 .FP_Btns_entering{
   opacity: 0;
-  animation: enter_apper 1000ms ;
+  animation: enter_apper 300ms ;
   animation-fill-mode:forwards;
 
 }
 
 .FP_Btns_exiting{
-  animation: exit 800ms ;
+  animation: exit 300ms ;
   animation-fill-mode:forwards;
 
 }
 
 .showNav{
-  animation: slide_down 2000ms ;
+  animation: slide_down 1000ms ;
   animation-fill-mode:forwards;
 }
 .hideNav{
-  animation: slide_down_hide 2000ms ;
+  animation: slide_down_hide 1000ms ;
   animation-fill-mode:forwards;
 }
+
+
+.slide_down{
+  animation: down 1000ms ;
+  animation-fill-mode:forwards;
+}
+
+.slide_back{
+  animation: up 1000ms ;
+  animation-fill-mode:forwards;
+}
+
 .fade{
-  animation: fade 500ms ;
-  animation-fill-mode:forwards;
-}
-
-.fade_design{
-  animation: fade 1500ms ;
-  animation-delay: 0s;
-  animation-fill-mode:forwards;
-}
-
-.fade_clint{
-  animation: fade 1500ms ;
-  animation-delay:1500ms;
-  animation-fill-mode:forwards;
-}
-
-.fade_art{
-  animation: fade 1500ms ;
-  animation-delay:2500ms;
-  animation-fill-mode:forwards;
-}
-
-.fade_pro{
-  animation: fade 1500ms ;
-  animation-delay:3500ms;
+  animation: fade 800ms ;
   animation-fill-mode:forwards;
 }
 
@@ -924,14 +865,20 @@ li{
   }
 }
 
-@keyframes height{
+@keyframes down{
   0%{
-    opacity: 0;
-   height: 0;
+    transform: translatey(0%);
   }
   100%{
-    opacity: 1;
-      height: 100%;
+      transform: translatey(5%);
+  }
+}
+@keyframes up{
+  0%{
+    transform: translatey(20%);
+  }
+  100%{
+      transform: translatey(0%);
   }
 }
 
@@ -939,8 +886,14 @@ li{
   0%{
     opacity: 0;
   }
+  25%{
+    opacity: 0.25;
+  }
   50%{
     opacity: 0.5;
+  }
+  75%{
+    opacity: 0.75;
   }
     100%{
         opacity:1 ;
