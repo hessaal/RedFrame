@@ -35,7 +35,7 @@ export function Assos() {
     return (
         // these will return circle shape contains partners number inside 
         <svg height='100%' width='100%'>
-            <circle cx="72%" cy="50%" r="85"
+            <circle cx="72%" cy="50%" r="75"
                 stroke="white"
                 strokeWidth="2"
                 fill="none"
