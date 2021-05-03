@@ -42,7 +42,7 @@ export class Home extends Component {
                         </div>
                     </CSSTransition>
 
-                    <div className={this.state.show ? ' FP_container_entering col-md-6 col-xs-12 ml-md-0 ml-xs-5' : '  FP_container_exiting col-md-6 col-xs-12 '}>
+                    <div className={this.state.show ? ' FP_container_entering col-md-6 col-xs-12 ' : '  FP_container_exiting col-md-6 col-xs-12 '}>
                         <img src={whiteDeco} id='white_deco' alt="" />
                         <div className='row right_side'>
                             <Button classname={this.state.show ? "col col-md-3 FP_Btns_spacial FP_Btns_entering" : "col col-md-3 FP_Btns_spacial FP_Btns_exiting"} label={<div> <FontAwesomeIcon className="icon_first" icon={faCheck} /> <p>تواصل معنا <br />وتقـدم بطلبك</p></div>} handleClick={this.gotoOrder} delay={this.state.show ? 2 : 3.5} />

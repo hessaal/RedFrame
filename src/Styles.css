@@ -1069,6 +1069,10 @@ line-height: 0;
 }
 
 @media screen and (max-width : 767px){
+
+  #right_side_container {
+    margin-left: 10%;
+  }
     #side_line {
         border: none;
     }
