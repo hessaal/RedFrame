@@ -31,7 +31,7 @@ export class Home extends Component {
     render() {
         return (
             <div >
-                <div className='row my-5 ml-s-5'>
+                <div className='row my-5 ml-5'>
                     <CSSTransition
                         timeout={1500}
                         classNames='leftElement'
