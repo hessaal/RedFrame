@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/RedFrame/static/css/main.c0dde286.chunk.css",
-    "main.js": "/RedFrame/static/js/main.b4c1c051.chunk.js",
-    "main.js.map": "/RedFrame/static/js/main.b4c1c051.chunk.js.map",
+    "main.js": "/RedFrame/static/js/main.2030bddb.chunk.js",
+    "main.js.map": "/RedFrame/static/js/main.2030bddb.chunk.js.map",
     "runtime-main.js": "/RedFrame/static/js/runtime-main.84734f18.js",
     "runtime-main.js.map": "/RedFrame/static/js/runtime-main.84734f18.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/RedFrame/static/css/2.4c97ca4f.chunk.css",
@@ -34,6 +34,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.3a5197d7.chunk.js",
     "static/css/main.c0dde286.chunk.css",
-    "static/js/main.b4c1c051.chunk.js"
+    "static/js/main.2030bddb.chunk.js"
   ]
 }
