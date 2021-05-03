@@ -81,7 +81,7 @@ export function getServicesCount() {
 }
 
 export function getSelectedServices() {
-    return choosedServices.filter((s, i) => choosedServices.indexOf(s) === i);
+    return choosedServices;
 }
 
 export function cleanSelected() {

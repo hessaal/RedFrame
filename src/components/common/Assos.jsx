@@ -5,15 +5,26 @@ export function Assos() {
     const [partners, setPartners] = useState(0);
 
     // partners_holder is the number of success partners red frame has 
-    let partners_holder = 10;
+    let partners_holder = 0;
 
-    // the partners number will increse by one every 100ms
+    // the partners number will increse by one every 10ms
     useEffect(() => {
-        const intervalId = setInterval(() => plus(), 100);
+        fetchData();
+        const intervalId = setInterval(() => plus(), 10);
         return function cleanup() {
             clearInterval(intervalId);
         };;
     });
+
+    function fetchData() {
+        // fetch('https://random-data-api.com/api/cannabis/random_cannabis?size=30')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         partners_holder = data.length
+        //         console.log(data)
+        //     }
+        //     )
+    }
 
     // the partners number will keep incresing until its reach to success partners number that red frame has 
     function plus() {

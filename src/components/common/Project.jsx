@@ -21,7 +21,7 @@ const Project = ({ index, backgroundImg, status, name }) => {
 
     return (
         <div className="project fade" style={{
-            backgroundImage: backgroundImg,
+            backgroundImage: `url('https://images.unsplash.com/photo-1619883758740-410caf79a63e?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60')`,
             animationDelay: `${index * .5}s`
         }}>
             <h6 className={"status " + tag_className()} >{status}</h6>

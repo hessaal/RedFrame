@@ -3,7 +3,7 @@ import Button from './common/Button';
 import Joi from 'joi-browser';
 import Form from './common/Form';
 import Card from './common/Card';
-import { getService, removeSelectedService, setchoosedServices } from '../Services';
+import { getService, removeSelectedService, setchoosedServices, getSelectedServices } from '../Services';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
@@ -13,7 +13,11 @@ import Alert from 'react-bootstrap/Alert';
 export class ServiceForm extends Form {
     state = {
         // data holdes inputs name and value as pair 
-        data: { fullName: '', foundationName: '', phone: '', email: '', commercialRegister: '', priority: '', orderDes: '', hasBranding: '' },
+        data: {
+            fullName: '', foundationName: '', phone: '', email: '',
+            commercialRegister: '', priority: '', orderDes: '', hasBranding: '', services: []
+        },
+
         // errors holds error msgs if  input value is invalid
         errors: {},
 
@@ -44,7 +48,27 @@ export class ServiceForm extends Form {
 - go back to the order page 
     */
     doSubmit() {
+        // let finaldata = this.state.data;
+        // finaldata.services = getSelectedServices();
+        // this.setState({ data: finaldata })
+
+        // let url = 'https://jsonplaceholder.typicode.com/posts'
+        // fetch(url, {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(this.state.data)
+        // }).catch(function (error) {
+        //     console.log('ERROR : ', error)
+        // })
         this.props.parentCallback();
+        // this.setState({
+        //     data: {
+        //         fullName: '', foundationName: '', phone: '', email: '',
+        //         commercialRegister: '', priority: '', orderDes: '', hasBranding: '', services: []
+        //     }
+        // })
         console.log("submited")
     }
 
@@ -140,7 +164,7 @@ export class ServiceForm extends Form {
                                         <text x="50%" y="75%"
                                             textAnchor="middle"
                                             fill='black'
-                                            fontSize="1rem"
+                                            fontS ize="1rem"
                                         > ودقة في الاداء</text>
                                     </svg>
 

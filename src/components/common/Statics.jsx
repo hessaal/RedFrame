@@ -9,18 +9,34 @@ export function Statics(run) {
 
     // this will set the value of designs, clints, arts, productions taking from server
     const [numbers, setNumbers] = useState({
-        design: 80,
-        clint: 40,
-        art: 35,
-        production: 20
+        design: 0,
+        clint: 0,
+        art: 0,
+        production: 0
     })
 
     // the designs, clints, arts, productions value will increse every 40ms
     useEffect(() => {
+        fetchData();
         const intervalId = setInterval(() => addNum(), 40);
         return () =>
             clearInterval(intervalId);
     });
+
+
+    function fetchData() {
+        // fetch('http://127.0.0.1:8000/api/projects/')
+        //     .then(response => response.json())
+        //     .then(data =>
+        //         setNumbers({
+        //             design: data.filter(d => d.ServiceType === "Design").length,
+        //             clint: data.length,
+        //             art: data.filter(d => d.ServiceType === "Events").length,
+        //             production: data.filter(d => d.ServiceType === "Production").length
+        //         })
+
+        //     )
+    }
 
     // this function will increse the numbers by one if they not reach the numbers that red frames have
     function addNum() {

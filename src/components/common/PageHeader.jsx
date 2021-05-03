@@ -16,7 +16,7 @@ function PageHeader({ above = '' }) {
 
     // class name change if screen size is less than 576px or there is div above the controls  
     let classname = ''
-    if (window.innerWidth < '576' && above !== '') {
+    if ((window.innerWidth < '576' || navigator.vendor.includes('Apple')) && above !== '') {
         classname = 'col-3 p-0'
     }
     else if (above === '') {

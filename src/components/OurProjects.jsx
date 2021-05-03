@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { getProjects } from "../fakeProjects";
 import Button from "./common/Button";
 import Project from "./common/Project";
 import PageHeader from "./common/PageHeader";
@@ -7,17 +6,28 @@ import PageHeader from "./common/PageHeader";
 
 export class OurProjects extends Component {
     state = {
-        projects: getProjects()
+        projects: []
+    }
+
+    componentDidMount() {
+        this.fetchData();
+    }
+
+    fetchData() {
+        // fetch('http://127.0.0.1:8000/api/projects/')
+        //     .then(response => response.json())
+        //     .then(data =>
+        //         this.setState({ projects: data })
+        //     )
     }
 
     // this function will fillter the projects based on which tag( project status ) user click
     handleClick = ({ currentTarget: element }) => {
-        const projects = getProjects();
+        this.fetchData();
         let tag = element.textContent;
-        if (tag === 'كل المشاريع') {
-            this.setState({ projects: projects })
-        } else {
-            let fillter_Projects = projects.filter(p => p.status === tag);
+        let projects = this.state.projects;
+        if (tag !== 'كل المشاريع') {
+            let fillter_Projects = projects.filter(p => p.StatusAr === tag);
             this.setState({ projects: fillter_Projects })
         }
     }
@@ -44,11 +54,12 @@ export class OurProjects extends Component {
                             <div className="col-md-6 col-lg-4 service_continer" key={project + index}>
                                 <Project
                                     index={index}
-                                    backgroundImg={project.backgroundImg}
-                                    status={project.status}
-                                    name={project.name} />
-                            </div>
-                        ))}</div>
+                                    backgroundImg={project.BackgroundProject}
+                                    status={project.StatusAr}
+                                    name={project.NameAr} />
+                            </div>))
+                        }
+                    </div>
 
                 </div>
             </div>

@@ -13,6 +13,7 @@ import EndPhase from './EndPhase';
 export class Order extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
 
             //  the content shows in the page will be based on which phase you on
@@ -53,7 +54,7 @@ export class Order extends Component {
 
                     {/* this is page header component with the prograss bar pass to it */}
                     <PageHeader above={
-                        <div className={window.innerWidth < '576' ? "col-9 p-0 position-relative" : "row position-relative"}>
+                        <div className={window.innerWidth < '576' || navigator.vendor.includes('Apple') ? "col-9 p-0 position-relative" : "row position-relative"}>
                             <img src={path} id='path' alt="progress line" />
                             <img src={welcome} id='welcome' alt="welcome" />
 
