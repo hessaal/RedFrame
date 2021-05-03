@@ -1004,7 +1004,7 @@ line-height: 70px;
 width: 70%;}
 
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
-{ @media {
+{
   .control_container {
     height: 7vh;
     }
@@ -1013,7 +1013,7 @@ width: 70%;}
       height: 6vh;
       }
 
-}}
+}
 @media screen and (max-width : 991px) {
     .navItem_style{
         width: 100%;
