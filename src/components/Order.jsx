@@ -52,9 +52,9 @@ export class Order extends Component {
             <div style={{ backgroundColor: 'white', padding: '10px', paddingTop: '0', direction: 'rtl' }}>
                 <div className="container">
 
-                    {/* this is page header component with the prograss bar pass to it */}
+                    {/* this is page header component with the prograss bar pass to it window.innerWidth < '576' || navigator.vendor.includes('Apple') ? : "row position-relative"*/}
                     <PageHeader above={
-                        <div className={window.innerWidth < '576' || navigator.vendor.includes('Apple') ? "col-9 p-0 position-relative" : "row position-relative"}>
+                        <div className={"col-7 p-0 position-relative"}>
                             <img src={path} id='path' alt="progress line" />
                             <img src={welcome} id='welcome' alt="welcome" />
 

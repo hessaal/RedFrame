@@ -14,10 +14,10 @@ function PageHeader({ above = '' }) {
     const [share, setShare] = useState(false);// if share is false the share conrols will hide , if it true share conrols will show
     const [clicked, setClicked] = useState(false);// if clicked is false the class of button conrols will hide , if it true the class of button conrols will show
 
-    // class name change if screen size is less than 576px or there is div above the controls  
+    // class name change if screen size is less than 576px or there is div above the controls   (window.innerWidth < '576' || navigator.vendor.includes('Apple')) &&
     let classname = ''
-    if ((window.innerWidth < '576' || navigator.vendor.includes('Apple')) && above !== '') {
-        classname = 'col-3 p-0'
+    if (above !== '') {
+        classname = 'col-12 p-0'
     }
     else if (above === '') {
         classname = 'row'

@@ -127,15 +127,16 @@ font-size: .7rem;
     }
  
 #path{
-    width: 80%;
+    width: 130%;
+    margin-right: -45%;
     position:absolute;
     z-index: 1;
 }
 
 #welcome{
-    width:15%;
-    margin-right:30%;
-    margin-top:0.5%;
+    width:25%;
+    margin-left:15%;
+    margin-top:1%;
 }
 
 .sample{
@@ -177,11 +178,11 @@ font-size: .7rem;
 }
 
 .progross_table {
-    width: 80%;
+    width: 120%;
     margin: auto;
-    margin-right: 0;
+    margin-right: 20%;
     z-index: 3;
-    margin-top: 1.5%;
+    margin-top: 1.3%;
 }
 
 
@@ -605,11 +606,14 @@ border: solid 3px #C92C37;}
   }
 
   .icon_first{
+    border-radius: 50%;
+    vertical-align:middle;
     background-color: transparent;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color:#C92C37;
-    padding: 18%;
+    padding: 4%;
     line-height: 0;
+    border: solid 1px #C92C37;
   }
 
 

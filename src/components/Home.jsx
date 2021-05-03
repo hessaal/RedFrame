@@ -31,7 +31,7 @@ export class Home extends Component {
     render() {
         return (
             <div >
-                <div className='row my-5 ml-5'>
+                <div className='row my-5 ml-s-5'>
                     <CSSTransition
                         timeout={1500}
                         classNames='leftElement'
@@ -45,7 +45,7 @@ export class Home extends Component {
                     <div className={this.state.show ? ' FP_container_entering col-md-6 col-xs-12 ' : '  FP_container_exiting col-md-6 col-xs-12 '}>
                         <img src={whiteDeco} id='white_deco' alt="" />
                         <div className='row right_side'>
-                            <Button classname={this.state.show ? "col col-md-3 FP_Btns_spacial FP_Btns_entering" : "col col-md-3 FP_Btns_spacial FP_Btns_exiting"} label={<div> <div className="icon_box"><FontAwesomeIcon className="icon_first" icon={faCheck} /></div> <p>تواصل معنا <br />وتقـدم بطلبك</p></div>} handleClick={this.gotoOrder} delay={this.state.show ? 2 : 3.5} />
+                            <Button classname={this.state.show ? "col col-md-3 FP_Btns_spacial FP_Btns_entering" : "col col-md-3 FP_Btns_spacial FP_Btns_exiting"} label={<div> <FontAwesomeIcon className="icon_first" icon={faCheck} /> <p>تواصل معنا <br />وتقـدم بطلبك</p></div>} handleClick={this.gotoOrder} delay={this.state.show ? 2 : 3.5} />
                             <div className="col col-md-5">
 
                                 <Button id='FB' classname={this.state.show ? "row FP_Btns FP_Btns_entering" : "row FP_Btns FP_Btns_exiting"} label="من نحن ؟" handleClick={this.gotoAbout} delay={this.state.show ? 3 : 0.5} />
