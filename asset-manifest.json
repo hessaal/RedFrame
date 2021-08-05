@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/RedFrame/static/css/main.02ff889f.chunk.css",
-    "main.js": "/RedFrame/static/js/main.2a8be421.chunk.js",
-    "main.js.map": "/RedFrame/static/js/main.2a8be421.chunk.js.map",
+    "main.css": "/RedFrame/static/css/main.bcbad0b4.chunk.css",
+    "main.js": "/RedFrame/static/js/main.cc64b352.chunk.js",
+    "main.js.map": "/RedFrame/static/js/main.cc64b352.chunk.js.map",
     "runtime-main.js": "/RedFrame/static/js/runtime-main.84734f18.js",
     "runtime-main.js.map": "/RedFrame/static/js/runtime-main.84734f18.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/RedFrame/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.160235f9.chunk.js": "/RedFrame/static/js/2.160235f9.chunk.js",
-    "static/js/2.160235f9.chunk.js.map": "/RedFrame/static/js/2.160235f9.chunk.js.map",
+    "static/js/2.de3dd25f.chunk.js": "/RedFrame/static/js/2.de3dd25f.chunk.js",
+    "static/js/2.de3dd25f.chunk.js.map": "/RedFrame/static/js/2.de3dd25f.chunk.js.map",
     "static/js/3.c32c6e6b.chunk.js": "/RedFrame/static/js/3.c32c6e6b.chunk.js",
     "static/js/3.c32c6e6b.chunk.js.map": "/RedFrame/static/js/3.c32c6e6b.chunk.js.map",
     "index.html": "/RedFrame/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/RedFrame/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.02ff889f.chunk.css.map": "/RedFrame/static/css/main.02ff889f.chunk.css.map",
-    "static/js/2.160235f9.chunk.js.LICENSE.txt": "/RedFrame/static/js/2.160235f9.chunk.js.LICENSE.txt",
+    "static/css/main.bcbad0b4.chunk.css.map": "/RedFrame/static/css/main.bcbad0b4.chunk.css.map",
+    "static/js/2.de3dd25f.chunk.js.LICENSE.txt": "/RedFrame/static/js/2.de3dd25f.chunk.js.LICENSE.txt",
     "static/media/Path.png": "/RedFrame/static/media/Path.6ae88a08.png",
     "static/media/Qmark.png": "/RedFrame/static/media/Qmark.0e17530b.png",
-    "static/media/index.css": "/RedFrame/static/media/RB_Regular.a3d325e7.ttf",
+    "static/media/index.css": "/RedFrame/static/media/RB_Light.23f895c7.ttf",
+    "static/media/Styles.css": "/RedFrame/static/media/RB_Regular.a3d325e7.ttf",
     "static/media/brandingBG.png": "/RedFrame/static/media/brandingBG.52bc60b3.png",
     "static/media/deco-red.png": "/RedFrame/static/media/deco-red.b0e3d591.png",
     "static/media/deco-white.png": "/RedFrame/static/media/deco-white.6295becb.png",
@@ -32,8 +33,8 @@
   "entrypoints": [
     "static/js/runtime-main.84734f18.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.160235f9.chunk.js",
-    "static/css/main.02ff889f.chunk.css",
-    "static/js/main.2a8be421.chunk.js"
+    "static/js/2.de3dd25f.chunk.js",
+    "static/css/main.bcbad0b4.chunk.css",
+    "static/js/main.cc64b352.chunk.js"
   ]
 }
